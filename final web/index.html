@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="115cjbHFn-XNny6BeVa0dEQvlAWdQphRUc7vcAZAj2Q" />
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="oktoris.png">
+       <!-- Font Google: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+    <title>Okto Infinitium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Website</title>
+    <style>
+      <body>
+      
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        
+        img {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Mencegah copy-paste
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            // Mencegah shortcut copy (Ctrl+C, Cmd+C)
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.keyCode === 67)) {
+                e.preventDefault();
+            }
+
+            // Mencegah shortcut print screen
+            if (e.key === 'PrintScreen') {
+                e.preventDefault();
+            }
+        });
+
+        // Mencegah drag gambar
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+
+        // Mencegah download gambar dengan klik kanan
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+
+        // Mencegah screenshot dengan disabling pemilihan
+        document.body.style.userSelect = 'none';
+        document.body.style.webkitUserSelect = 'none';
+        document.body.style.mozUserSelect = 'none';
+        document.body.style.msUserSelect = 'none';
+
+        // Menampilkan pesan peringatan jika ada upaya copy
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+            alert('Copy tidak diizinkan!');
+            
+        });
+        
+    </script>
+</body>
+</html>
+    <style>
+  
+    /* Animasi tambahan untuk efek glow */
+@keyframes textGlowFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes textShimmer {
+    0% { 
+        text-shadow: 
+            0 0 5px rgba(244, 235, 220, 0.3), 
+            0 0 10px rgba(74, 144, 226, 0.2);
+    }
+    50% { 
+        text-shadow: 
+            0 0 15px rgba(244, 235, 220, 0.6), 
+            0 0 25px rgba(74, 144, 226, 0.5);
+    }
+    100% { 
+        text-shadow: 
+            0 0 5px rgba(244, 235, 220, 0.3), 
+            0 0 10px rgba(74, 144, 226, 0.2);
+    }
+}
+    
+    /* Animate logo rotation */
+@keyframes logoRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animate logo float */
+@keyframes logoFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+/* Background Gradient Animation */
+@keyframes backgroundFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background: linear-gradient(135deg, #283954, #1a2537, #4a90e2);
+    background-size: 400% 400%;
+    animation: backgroundFlow 15s ease infinite;
+    color: #f4ebdc;
+}
+
+/* Floating Particle Animation */
+@keyframes particleFloat {
+    0% { 
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translate(50px, -50px) rotate(180deg);
+        opacity: 0.8;
+    }
+    100% { 
+        transform: translate(0, 0) rotate(360deg);
+        opacity: 0.6;
+    }
+}
+
+.particle {
+    position: fixed;
+    background: rgba(74, 144, 226, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Text Shimmer Effect */
+@keyframes textShimmer {
+    0%, 100% { 
+        text-shadow: 
+            0 0 5px rgba(74, 144, 226, 0.3),
+            0 0 10px rgba(244, 235, 220, 0.2);
+    }
+    50% { 
+        text-shadow: 
+            0 0 15px rgba(74, 144, 226, 0.7),
+            0 0 25px rgba(244, 235, 220, 0.5);
+    }
+}
+
+.shimmer-text {
+    background: linear-gradient(45deg, #f4ebdc, #4a90e2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 
+        textShimmer 3s ease-in-out infinite,
+        textGradientFlow 5s ease infinite;
+}
+
+/* Gradient Text Flow */
+@keyframes textGradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating Text Animation */
+@keyframes floatingText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.floating-text {
+    display: inline-block;
+    animation: 
+        floatingText 3s ease-in-out infinite,
+        textShimmer 2s ease-in-out infinite alternate;
+}
+
+/* Animate logo text glow */
+@keyframes glowText {
+  0% { text-shadow: 0 0 10px var(--logo-color); }
+  50% { text-shadow: 0 0 20px var(--logo-color); }
+  100% { text-shadow: 0 0 10px var(--logo-color); }
+}
+
+/* Animate logo image float and glow */
+@keyframes floatAndGlow {
+  0% { transform: translateY(0); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+  50% { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(74, 144, 226, 0.4); }
+  100% { transform: translateY(0); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+}
+
+/* Animate logo image border glow */
+@keyframes glowBorder {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Animate image pulse */
+@keyframes imagePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Animate navbar slide down */
+@keyframes navbarSlideDown {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+/* Animate button pulse */
+@keyframes buttonPulse {
+  0% { box-shadow: 0 0 0 0 rgba(244, 235, 220, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(244, 235, 220, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(244, 235, 220, 0); }
+}
+
+/* Animate content fade in */
+@keyframes contentFadeIn {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animate title slide in */
+@keyframes titleSlideIn {
+  0% { opacity: 0; transform: translateX(-50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Animate subtitle slide in */
+@keyframes subtitleSlideIn {
+  0% { opacity: 0; transform: translateX(50px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Animate description fade in */
+@keyframes descriptionFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 0.9; }
+}
+
+/* Animate film container slide up */
+@keyframes filmContainerSlideUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animate social links slide up */
+@keyframes socialLinksSlideUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* Animate film container flip */
+@keyframes filmContainerFlip {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(90deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+/* Animate film poster scale */
+@keyframes filmPosterScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Animate social link hover */
+@keyframes socialLinkHover {
+  0% { transform: translateY(0); background: rgba(255, 255, 255, 0.1); }
+  50% { transform: translateY(-5px); background: var(--secondary-color); color: var(--primary-color); }
+  100% { transform: translateY(0); background: rgba(255, 255, 255, 0.1); }
+}
+
+/* Animate description typewriter effect */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkCaret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--secondary-color); }
+}
+
+/* Animate background pulse */
+@keyframes pulseBackground {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+    <style>
+        /* Tambahkan animasi teks */
+        @keyframes textGradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes textShimmer {
+            0% { text-shadow: 0 0 5px rgba(255,255,255,0.3); }
+            50% { text-shadow: 0 0 15px rgba(255,255,255,0.6); }
+            100% { text-shadow: 0 0 5px rgba(255,255,255,0.3); }
+                /* Tambahkan animasi teks glow */
+        @keyframes textGradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes textShimmer {
+            0% { 
+                text-shadow: 
+                    0 0 5px rgba(244, 235, 220, 0.3), 
+                    0 0 10px rgba(74, 144, 226, 0.2);
+            }
+            50% { 
+                text-shadow: 
+                    0 0 15px rgba(244, 235, 220, 0.6), 
+                    0 0 25px rgba(74, 144, 226, 0.5);
+            }
+            100% { 
+                text-shadow: 
+                    0 0 5px rgba(244, 235, 220, 0.3), 
+                    0 0 10px rgba(74, 144, 226, 0.2);
+            }/* Animasi glow untuk judul "Film Kami" */
+            /* Animasi Logo Bergerak dan Bercahaya */
+@keyframes logoRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes logoFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes glowEffect {
+    0%, 100% { box-shadow: 0 0 10px rgba(74, 144, 226, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(74, 144, 226, 0.7); }
+}
+
+.logo-image {
+    animation: 
+        logoFloat 3s ease-in-out infinite,
+        glowEffect 3s ease-in-out infinite;
+}
+
+/* Animasi Tombol Hover */
+@keyframes buttonPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.contact-btn {
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    animation: buttonPulse 0.5s ease-in-out;
+    transform: translateY(-5px);
+}
+
+/* Animasi Section Fade In */
+@keyframes sectionFadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(50px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.main-content section {
+    opacity: 0;
+    animation: sectionFadeIn 1s ease-out forwards;
+}
+
+/* Hover Effect pada Film Container */
+.film-container {
+    transition: all 0.5s ease;
+}
+
+.film-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
+}
+
+/* Text Shimmer Effect */
+@keyframes textShimmer {
+    0%, 100% { 
+        text-shadow: 0 0 5px rgba(74, 144, 226, 0.3); 
+    }
+    50% { 
+        text-shadow: 0 0 20px rgba(74, 144, 226, 0.7); 
+    }
+}
+
+.title, .subtitle {
+    animation: textShimmer 2s ease-in-out infinite;
+}
+
+}
+
+/* Background Gradient Animation */
+@keyframes backgroundFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background: linear-gradient(135deg, #283954, #1a2537);
+    background-size: 400% 400%;
+    animation: backgroundFlow 15s ease infinite;
+}
+.film-section-title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #f4ebdc, #4a90e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 
+        textGlowFlow 3s ease infinite,
+        textShimmer 2s ease-in-out infinite alternate;
+    transition: all 0.5s ease;
+}
+
+.film-section-title::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #f4ebdc, #4a90e2);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.film-section-title:hover::before {
+    transform: scaleX(1);
+}
+
+/* Animasi glow untuk poster film */
+.film-poster {
+    position: relative;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.film-poster::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center, 
+        rgba(74, 144, 226, 0.3) 0%, 
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.film-poster:hover::before {
+    opacity: 1;
+}
+
+.film-poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.film-poster:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.5);
+}
+
+/* Animasi glow untuk sinopsis */
+.synopsis-container {
+    position: relative;
+    background: rgba(40, 57, 84, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .film-section-title,
+    .synopsis-title {
+        font-size: 1.8rem;
+    }
+}
+
+.synopsis-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(244, 235, 220, 0.1), 
+        rgba(74, 144, 226, 0.1)
+    );
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.synopsis-container:hover::before {
+    opacity: 1;
+}
+
+.synopsis-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    background: linear-gradient(45deg, #f4ebdc, #4a90e2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 
+        textGlowFlow 3s ease infinite,
+        textShimmer 2s ease-in-out infinite alternate;
+}
+
+.synopsis-text {
+    color: rgba(244, 235, 220, 0.9);
+    line-height: 1.7;
+    transition: color 0.5s ease;
+}
+
+.synopsis-container:hover .synopsis-text {
+    color: rgba(244, 235, 220, 1);
+}
+        }
+        }
+}
+ }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--body-font); /* Default font */
+        }
+
+        /* Update font untuk elemen spesifik */
+        .title {
+            font-family: var(--primary-font);
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-family: var(--secondary-font);
+            font-weight: 600;
+        }
+
+        .description {
+            font-family: var(--body-font);
+            font-weight: 400;
+        }
+
+        .logo-text {
+            font-family: var(--primary-font);
+            font-weight: 700;
+        }
+
+        .film-title, .synopsis-title {
+            font-family: var(--secondary-font);
+            font-weight: 600;
+        }
+
+        .contact-btn {
+            font-family: var(--primary-font);
+            font-weight: 600;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Godiva Regular', Arial, sans-serif;
+        }
+
+        :root {
+            --primary-color: #283954;
+            --secondary-color: #f4EBDC;
+            --transition-speed: 0.3s;
+            --logo-color: #e8d5c4;
+        }
+
+        body {
+            background: linear-gradient(135deg, #283954, #1a2537);
+            color: var(--secondary-color);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+            pointer-events: none;
+            animation: pulseBackground 10s ease-in-out infinite;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+            animation: logoFloat 5s ease-in-out infinite;
+        }
+
+        .logo-symbol {
+            width: 40px;
+            height: 40px;
+            fill: var(--logo-color);
+            animation: logoRotate 2s linear infinite;
+        }
+
+        @keyframes logoRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--logo-color);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            animation: glowText 2s ease-in-out infinite;
+            font-family: 'Godiva Regular', Arial, sans-serif;
+        }
+         /* Terapkan efek glow pada elemen-elemen tertentu */
+        .title {
+            animation: textShimmer 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            animation: textShimmer 3s ease-in-out infinite 0.5s;
+        }
+
+        .description {
+            animation: textShimmer 3s ease-in-out infinite 1s;
+        }
+
+        .film-title {
+            animation: textShimmer 3s ease-in-out infinite 1.5s;
+        }
+
+        /* Efek gradient pada beberapa elemen */
+        .logo-text {
+            background: linear-gradient(45deg, #f4ebdc, #4a90e2, #f4ebdc);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textGradientFlow 5s ease infinite;
+        }
+
+        mark {
+            background: linear-gradient(135deg, rgba(244, 235, 220, 0.5), rgba(74, 144, 226, 0.3));
+            color: #283954;
+            padding: 2px 6px;
+            border-radius: 20px;
+            font-weight: 600;
+            box-shadow: 
+                0 4px 6px rgba(0,0,0,0.1), 
+                inset 0 2px 4px rgba(255,255,255,0.2);
+            display: inline-block;
+            margin: 0 3px;
+            transition: all 0.3s ease;
+            animation: textShimmer 3s ease-in-out infinite 2s;
+        }
+
+        .logo-image {
+            width: 200px;
+            margin: 2rem 0;
+            position: relative;
+            animation: floatAndGlow 4s ease-in-out infinite;
+        }
+
+        .logo-image::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 15px;
+            background: linear-gradient(45deg, #4a90e2, transparent);
+            z-index: -1;
+            animation: glowBorder 2s ease-in-out infinite;
+            opacity: 0.5;
+        }
+
+        .logo-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+            animation: imagePulse 3s ease-in-out infinite;
+        }
+
+        .logo-image img:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 25px rgba(74, 144, 226, 0.4);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(40, 57, 84, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.5s ease;
+            animation: navbarSlideDown 1s ease-out;
+        }
+
+        .navbar.scrolled {
+            padding: 1rem 5%;
+            background: rgba(40, 57, 84, 0.98);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-btn {
+            color: var(--secondary-color);
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--secondary-color);
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: buttonPulse 2s ease-in-out infinite;
+            font-family: 'Godiva Regular', Arial, sans-serif;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(244, 235, 220, 0.4);
+        }
+
+        .main-content {
+            padding: 8rem 5% 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            min-height: 100vh;
+            position: relative;
+            animation: contentFadeIn 1.5s ease-out;
+        }
+
+        .content-left {
+            flex: 1;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            position: relative;
+            animation: titleSlideIn 1s ease-out;
+            background: linear-gradient(135deg, var(--secondary-color), #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            animation: gradientFlow 3s linear infinite;
+            font-family: 'Godiva Regular', Arial, sans-serif;
+            
+        }
+
+        .subtitle {
+            color: #4a90e2;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            animation: subtitleSlideIn 1s ease-out 0.2s backwards;
+            font-family: 'Godiva Regular', Arial, sans-serif;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            color: rgba(244, 235, 220, 0.9);
+            animation: descriptionFadeIn 1s ease-out 0.4s backwards;
+            position: relative;
+        }
+
+        .film-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Godiva Regular', Arial, sans-serif;
+        }
+
+        .film-container {
+            background-color: rgba(244, 235, 220, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            animation: filmContainerSlideUp 1s ease-out 0.8s backwards;
+        }
+
+        .film-container img {
+            width: 100%;
+            max-width: 420px;
+            margin-top: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            animation: socialLinksSlideUp 1s ease-out 0.6s backwards;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(40, 57, 84, 0.9);
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .social-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+            padding: 0.8rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-link i {
+            font-size: 20px;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            box-shadow: 0 0 20px rgba(244, 235, 220, 0.4);
+        }
+        
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeOut 0.5s ease-in-out 2s forwards;
+            
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
+
+        @media (max-width: 1200px) {
+            .title { font-size: 3rem; }
+            .subtitle { font-size: 1.6rem; }
+        }
+
+        @media (max-width: 992px) {
+            .main-content { padding-top: 6rem; }
+            .title { font-size: 2.5rem; }
+            .subtitle { font-size: 1.4rem; }
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 1rem 5%; }
+            .logo-text { font-size: 1.2rem; }
+            .main-content {
+                flex-direction: column;
+                padding: 5rem 5% 3rem;
+                text-align: center;
+            }
+            .title { font-size: 2rem; }
+            .subtitle { font-size: 1.2rem; }
+            .description { font-size: 1rem; }
+            .social-links { justify-content: center; }
+            .logo-image { 
+                margin: 2rem auto;
+                width: 150px; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar { padding: 0.8rem 4%; }
+            .contact-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            .title { font-size: 1.8rem; }
+            .description { font-size: 0.95rem; }
+            .logo-image { width: 120px; }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="loading-overlay">
+        <div class="logo-container">
+            <svg class="logo-symbol" viewBox="0 0 100 50">
+                <path d="M30,25 C30,15 40,15 50,25 C60,35 70,35 70,25 C70,15 60,15 50,25 C40,35 30,35 30,25 Z"/>
+            </svg>
+            <div class="logo-text">Okto Infinitium</div>
+        </div>
+    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="115cjbHFn-XNny6BeVa0dEQvlAWdQphRUc7vcAZAj2Q" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="oktoris.png">
+    <title>Okto Infinitium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* [Semua CSS sebelumnya tetap sama] */
+
+        /* Update untuk deskripsi */
+        .description {
+            text-align: justify; /* Tambahkan justify */
+            font-family: 'Arial', sans-serif; /* Font yang lebih modern */
+            line-height: 1.7; /* Sedikit perbaikan line height */
+            letter-spacing: 0.5px; /* Tambahkan sedikit spasi huruf */
+        }
+
+        /* Update untuk media sosial */
+        .social-links {
+            gap: 1rem; /* Kurangi jarak antar ikon */
+            background: rgba(40, 57, 84, 0.7); /* Lebih transparan */
+            padding: 10px 20px; /* Sedikit lebih kecil */
+        }
+
+        .social-link {
+            width: 30px; /* Ukuran ikon lebih kecil */
+            height: 30px; /* Ukuran ikon lebih kecil */
+        }
+
+        .social-link i {
+            font-size: 16px; /* Ukuran ikon lebih kecil */
+        }
+
+        /* Tambahkan beberapa elemen menarik */
+        .main-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(40, 57, 84, 0.2), rgba(74, 144, 226, 0.1));
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Efek parallax sederhana */
+        .logo-image {
+            transition: transform 0.3s ease;
+            perspective: 1000px;
+        }
+
+        .logo-image:hover {
+            transform: rotateY(10deg) scale(1.05);
+        }
+
+        /* Responsif untuk mobile */
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 4rem 3% 2rem; /* Padding lebih kecil */
+            }
+
+            .title {
+                font-size: 1.6rem; /* Judul lebih kecil */
+            }
+
+            .description {
+                font-size: 0.9rem; /* Teks deskripsi lebih kecil */
+            }
+        
+          /* Style mark yang lebih halus */
+        mark {
+            background: linear-gradient(135deg, rgba(244, 235, 220, 0.2), rgba(244, 235, 220, 0.4));
+            color: #283954;
+            padding: 2px 6px;
+            border-radius: 20px;
+            font-weight: 600;
+            box-shadow: 
+                0 4px 6px rgba(0,0,0,0.1), 
+                inset 0 2px 4px rgba(255,255,255,0.2);
+            display: inline-block;
+            margin: 0 3px;
+            transition: all 0.3s ease;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- [Seluruh struktur body sebelumnya tetap sama] -->
+</body>
+</html>
+    <nav class="navbar">
+        <div class="logo-container">
+            <svg class="logo-symbol" viewBox="0 0 100 50">
+                <path d="M30,25 C30,15 40,15 50,25 C60,35 70,35 70,25 C70,15 60,15 50,25 C40,35 30,35 30,25 Z"/>
+            </svg>
+            <div class="logo-text">Okto Infinitium</div>
+        </div>
+        <a href="mailto:oktoinfitium@gmail.com" class="contact-btn">Contact</a>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-left">
+            <h1 class="title">Hi, This Okto Infinitium</h1>
+            <p class="subtitle">Production House</p>
+            <div class="logo-image">
+                <img src="logo.png" alt="Okto Infinitium Logo">
+            </div>
+            <p class="description">
+                Okto Infinitium adalah sebuah production house yang berasal dari <b>SMK Boash One</b>, dibentuk oleh siswa-siswi kreatif kelas <mark style="background: #f4ebdc"><b>11 DKV 8</b></mark>. Saat ini, kami bangga berpartisipasi dalam <u><b>Boash Movie Awards</b></u>, dengan tujuan tidak hanya untuk bersaing, tetapi juga untuk menunjukkan kualitas dan komitmen kami dalam industri kreatif. Melalui situs ini, kami mempersembahkan proyek terbaru kami,<mark style="background: #f4ebdc"><b>Temporis Kelana</b></mark> —sebuah film yang menggambarkan perjalanan, inovasi, dan profesionalisme kami dalam mengemas ide-ide menjadi karya visual yang inspiratif dan penuh makna.
+            <div class="film-container">
+                <h2 class="film-title">Film Kami</h2>
+                <img src="poster.png" alt="Poster Film" style="width: 100%; max-width: 420px; margin-top: 1rem;">
+<!-- Add these updated styles in the <style> section -->
+<style>
+
+/* Previous styles remain the same */
+
+.synopsis-container {
+    background: #283954;
+    padding: 2.5rem;
+    margin: 3rem auto;
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* Match poster width */
+    aspect-ratio: 1/1.414; /* A3 paper ratio */
+    box-shadow: 
+        0 1px 1px rgba(0,0,0,0.15),
+        0 2px 2px rgba(0,0,0,0.15),
+        0 4px 4px rgba(0,0,0,0.15),
+        0 8px 8px rgba(0,0,0,0.15);
+    transform: perspective(1000px) rotateX(2deg);
+    animation: paperFloat 3s ease-in-out infinite;
+}
+
+}
+
+.synopsis-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+
+.synopsis-title {
+    font-size: 2.2rem;
+    color: #F4EBDC;
+    margin-bottom: 1.5rem;
+    font-family: 'Godiva Regular', Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    border-bottom: 2px solid #283954;
+    padding-bottom: 0.5rem;
+}
+
+.synopsis-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #F4EBDC;
+    text-align: justify;
+    font-family: 'Godiva Regular', Arial, sans-serif;
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0 0.5rem;
+}
+
+.pre-order-btn {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #283954, #4a90e2);
+    color: #f4EBDC;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    animation: buttonPulse 2s infinite;
+    box-shadow: 0 5px 15px rgba(40, 57, 84, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.pre-order-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(40, 57, 84, 0.5);
+    background: linear-gradient(135deg, #4a90e2, #283954);
+}
+
+/* Add paper texture effect */
+.synopsis-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.1;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+@media (max-width: 768px) {
+    .synopsis-container {
+        transform: perspective(1000px) rotateX(0deg);
+        margin: 2rem auto;
+        padding: 1.5rem;
+    }
+    
+    .synopsis-title {
+        font-size: 1.8rem;
+    }
+    
+    .synopsis-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .pre-order-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+    }
+}
+</style>
+
+<!-- In the film-container div, update the synopsis section -->
+<div class="synopsis-container">
+    <h2 class="synopsis-title">Sinopsis</h2>
+    <p class="synopsis-text">
+        Sekelompok tarian les sekolah telah diberi kesempatan untuk mengikuti lomba sanggar di sekolahnya. Mereka harus berlatih untuk menari semampu-mampunya selama seminggu sebelum lomba dimulai. Sheila, salah satu penari kelompok dari sekolahnya, berjuang untuk menemukan tujuannya menjadi penari, dalam perjalanannya menjadi pemain yang lebih baik, di tengah perjalanannya, sheila dapat menemukan lebih dari yang dia harapkan, namun di lingkungan yang lebih asing
+    </p>
+    <a href="https://wa.me/6285147164543" class="pre-order-btn" target="_blank">
+        Pre Order Ticket
+    </a>
+</div>
+                
+                
+            <div class="social-links">
+                <a href="https://www.instagram.com/okto.infinitium?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@okto.infinitium?_t=8qxK1HAHKMi&_r=1" class="social-link" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1ATfG3iE7B/" class="social-link" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                    
+                </a>
+            </div>
+        </div>
+    </main>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="115cjbHFn-XNny6BeVa0dEQvlAWdQphRUc7vcAZAj2Q" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="oktoris.png">
+    <title>Okto Infinitium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* [Semua CSS sebelumnya] */
+
+        .main-content {
+            padding: 8rem 5% 5rem;
+            display: flex;
+            flex-direction: column; /* Ubah menjadi column */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+            animation: contentFadeIn 1.5s ease-out;
+            text-align: center; /* Tambahkan pemusatan teks */
+        }
+
+        .content-left {
+            flex: 1;
+            max-width: 800px;
+            width: 100%; /* Pastikan full width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+            margin-bottom: 1rem; /* Kurangi margin */
+            text-align: center; /* Pusatkan judul */
+            width: 100%; /* Pastikan full width */
+        }
+
+        .subtitle {
+            text-align: center; /* Pusatkan subtitle */
+            width: 100%; /* Pastikan full width */
+            margin-bottom: 1rem; /* Sesuaikan margin */
+        }
+
+        .logo-image {
+            order: -1; /* Tempatkan logo di atas judul */
+            margin-bottom: 2rem; /* Beri jarak */
+            max-width: 250px; /* Batasi lebar maksimum logo */
+            width: 100%; 
+        }
+
+        .description {
+            text-align: justify;
+            max-width: 100%; /* Pastikan deskripsi tidak terlalu lebar */
+            width: 100%;
+            padding: 0 1rem; /* Tambahkan sedikit padding */
+        }
+
+        /* Perbaikan responsif */
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 6rem 3% 3rem;
+            }
+
+            .logo-image {
+                max-width: 200px;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-image {
+                max-width: 150px;
+            }
+
+            .title {
+                font-size: 1.6rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+  
+    <!-- Struktur body tetap sama seperti sebelumnya -->
+</body>
+</html>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compact Music Player</title>
+    <style>
+        :root {
+            --primary-color: #283954;
+            --secondary-color: #f4EBDC;
+            --accent-color: #4a90e2;
+            --button-bg: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background: linear-gradient(135deg, #283954, #1a2537);
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Kontainer tombol musik menyesuaikan dengan ukuran tombol */
+        .music-player-container {
+            position: fixed;
+            right: 20px;
+            top: 40%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            width: 50px;
+            padding: 8px 0;
+            background: linear-gradient(135deg, #283954, #1a2537);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+        }
+
+        /* Ukuran dan desain tombol kecil */
+        .music-player-btn {
+            width: 30px;
+            height: 30px;
+            background: var(--button-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            margin: 4px 0;
+            position: relative;
+        }
+
+        .music-player-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+            transform: scale(1.1);
+        }
+
+        .music-player-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--secondary-color);
+            transition: transform 0.2s ease;
+        }
+
+        .music-player-btn:active svg {
+            transform: scale(0.9);
+        }
+
+        /* Efek glow saat musik dimainkan */
+        .music-player-btn.playing {
+            animation: glowPulse 2s infinite alternate;
+        }
+
+        @keyframes glowPulse {
+            0%, 100% {
+                box-shadow: 0 4px 6px rgba(74, 144, 226, 0.3);
+            }
+            50% {
+                box-shadow: 0 8px 15px rgba(74, 144, 226, 0.5);
+            }
+        }
+
+        .pause-icon {
+            display: none;
+        }
+
+        .music-player-btn.playing .play-icon {
+            display: none;
+        }
+
+        .music-player-btn.playing .pause-icon {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="music-player-container">
+        <!-- Tombol Selanjutnya -->
+        <div class="music-player-btn" id="nextBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <polygon points="2 3 11 12 2 21 2 3" />
+                <polygon points="13 3 22 12 13 21 13 3" />
+            </svg>
+        </div>
+
+        <!-- Tombol Play/Pause -->
+        <div class="music-player-btn" id="musicToggleBtn">
+            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <svg class="pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+        </div>
+
+        <!-- Tombol Sebelumnya -->
+        <div class="music-player-btn" id="prevBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <polygon points="11 3 2 12 11 21 11 3" />
+                <polygon points="22 3 13 12 22 21 22 3" />
+            </svg>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="music.mp3" type="audio/mp3">
+        Browser tidak mendukung elemen audio.
+    </audio>
+
+    <script>
+        const music = document.getElementById('backgroundMusic');
+        const musicToggleBtn = document.getElementById('musicToggleBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let isPlaying = false;
+
+        // Daftar lagu
+        const playlist = [
+            "music.mp3",
+            "music2.mp3",
+            "music3.mp3",
+            "music4.mp3",
+            "music5.mp3",
+            
+        ];
+        let currentSongIndex = 0;
+
+        // Fungsi untuk mengganti lagu
+        function changeSong(index) {
+            music.src = playlist[index];
+            if (isPlaying) music.play();
+        }
+
+        // Mengatur status play/pause
+        musicToggleBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                music.pause();
+                musicToggleBtn.classList.remove('playing');
+            } else {
+                music.play();
+                musicToggleBtn.classList.add('playing');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Tombol Sebelumnya
+        prevBtn.addEventListener('click', () => {
+            currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+            changeSong(currentSongIndex);
+        });
+
+        // Tombol Selanjutnya
+        nextBtn.addEventListener('click', () => {
+            currentSongIndex = (currentSongIndex + 1) % playlist.length;
+            changeSong(currentSongIndex);
+        });
+    </script>
+</body>
+</html>
